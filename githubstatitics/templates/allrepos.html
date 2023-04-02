@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+ 
+              
+ {% block content %}
+   <div class ="row "><h2 class="h2">-----All Repos-----</h2></div>
+	<div class ="row center ">
+				<table   >
+						<tr  >
+							<th class="th">Name</th>
+							<th class="th">Size</th>
+							<th class="th">Star</th>
+							<th class="th">Language</th>
+							
+						</tr>
+					{% for repo in repos %}
+						<tr >
+							<td class="td"> {{repo.name}}</td>
+							<td class="td">{{repo.size}}</td>
+							<td class="td">{{repo.stargazers_count}}</td>
+							<td class="td">{{repo.language}}</td>
+						</tr>
+					 {%endfor%}
+							  
+			   </table>
+	 </div >
+</body>
+
+</html>
+{% endblock  %}     
