@@ -11,46 +11,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    
-
-
     <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css" />
     <link href="static/signinform.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static "yan.css" %}">
-   
+    <link rel="stylesheet" href="{% static 'yan.css' %}">
+    <style>
+      .navbarPadding{
+       padding-left:50px;
+       padding-right:50px;
+      }
+      .rightPartPadding{
+        padding-left:50px;
+      }
+      body {
+       margin-left: 20px; 
+       margin-right: 20px; 
+       margin-bottom:20px;
+       padding-bottom:30px;
+      }
+     .navbar-brand {
+       color: #000; 
+       text-decoration: none; 
+       transition: color 0.3s; 
+       text-align:center;
+     }
+    .navbar-brand:hover {
+       color: #609b8a; }
+     .titleSize{
+       font-size:30px;
+       color:#609b8a;
+     }
+     .custom-background {
+        background-color: rgba(249,249,249,1);
+    }
+</style>
+
+
   </head>
-
-
-
-
-  <nav class="navbar navbar-expand-md shadow-sm">
-    <p class="h2"> GitHub <br>Statistics</p>
-    <div class="h2">
+  
+  <body>
+  <nav class="navbarPadding navbar navbar-expand-md shadow-sm justify-content-between">
+    <div class="titleSize"> My GitHub Statistics </div>
+    <div >
       
-        <a class="navbar-brand  paddingleft" href="/">Home</a>
         <a class="navbar-brand navfont" href="/all-repos/">All Repos</a>
-        <a class="navbar-brand  navfont" href="/repo-size/">Repo size</a>
-         <a class="navbar-brand  navfont" href="/language-used/">Language Used</a>
+        <a class="navbar-brand navfont" href="/repo-size/">Repo size</a>
+        <a class="navbar-brand navfont" href="/language-used/">Language Used</a>
+         <!-- <a class="navbar-brand paddingleft" href="/">Home</a> -->
       </div>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          
-            <ul class="navbar-nav ms-auto">
-
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="/account/login/">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/account/signup/">Sign up</a>
-                    </li>
-                
-            </ul>
-
-        </div>
     </nav>
-    
      {% block content %}   
   
- {% endblock %}      
-
+     {% endblock %}  
+  </body>      
+<html>

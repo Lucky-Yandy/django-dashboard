@@ -1,30 +1,27 @@
-{% extends "base.html" %}
-
- 
-              
+{% extends "base.html" %}             
  {% block content %}
-   <div class ="row "><h2 class="h2">-----All Repos-----</h2></div>
-	<div class ="row center ">
-				<table   >
-						<tr  >
-							<th class="th">Name</th>
-							<th class="th">Size</th>
-							<th class="th">Star</th>
-							<th class="th">Language</th>
-							
-						</tr>
-					{% for repo in repos %}
-						<tr >
-							<td class="td"> {{repo.name}}</td>
-							<td class="td">{{repo.size}}</td>
-							<td class="td">{{repo.stargazers_count}}</td>
-							<td class="td">{{repo.language}}</td>
-						</tr>
-					 {%endfor%}
-							  
-			   </table>
-	 </div >
-</body>
+ 
+      <div class ="container d-flex justify-content-center align-items-center custom-background" style="color: black; font-size:20px;margin-top:20px; margin-bottom:20px;">Repo List</div>
+      <div class ="container d-flex justify-content-center align-items-center custom-background">
+       
+	<table width="80%"> 
+	 <tr>
+	  <th class="th">Name</th>
+	  <th class="th">Size</th>
+	  <th class="th">Star</th>
+	  <th class="th">Language</th>
+	 </tr>
+	{% for repo in repos %}
+	 <tr >
+	  <td class="td"> {{repo.name}}</td>
+	  <td class="td">{{repo.size}}</td>
+	  <td class="td">{{repo.stargazers_count}}</td>
+	  <td class="td">{{repo.language}}</td>
+	 </tr>
+	{%endfor%}
+	</table>
+  </div>
 
-</html>
+
+
 {% endblock  %}     

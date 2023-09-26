@@ -3,11 +3,8 @@
  
               
  {% block content %}
-   <!--<div class ="row "><h2 class="h2">-----Repo Size-----</h2></div>-->
-	<div class ="row ">
-			<embed type="image/svg+xml" src="{{chart_svg_as_datauri|safe }}" />
-	 </div > 
-</body>
-
-</html>
+  <div class ="container d-flex justify-content-center align-items-center">
+    <embed type="image/svg+xml" src="{{chart_svg_as_datauri|safe }}" />
+  </div>
+  
 {% endblock  %}     

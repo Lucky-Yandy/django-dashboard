@@ -12,23 +12,11 @@ import requests
 from django.http import HttpResponse
 import pygal
 
-
-
-
-
-
-
-
-
-def homepage(request):
-        
-      
-      
+def homepage(request):     
       context = {
-          
-           
-        }
-      return render(request,  'home.html',  context)
+	  
+	    }
+      return render(request,'home.html', context)
 
   
 
@@ -42,11 +30,10 @@ def all_repos(request):
     repos = response.json()
 
     for repo in repos:
-        repo_name = repo['name']
-        repo_star = repo['stargazers_count']
-        repo_size = repo['size']
-        repo_language = repo['language']
-
+       repo_name = repo['name']
+       repo_star = repo['stargazers_count']
+       repo_size = repo['size']
+       repo_language = repo['language']
     context = {
         'repos': repos,
     }
