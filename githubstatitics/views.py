@@ -13,10 +13,21 @@ from django.http import HttpResponse
 import pygal
 
 def homepage(request):     
-      context = {
+   
 	  
-	    }
-      return render(request,'home.html', context)
+    response = requests.get("https://api.github.com/users/Lucky-Yandy/repos")
+    repos = response.json()
+
+    for repo in repos:
+       repo_name = repo['name']
+       repo_star = repo['stargazers_count']
+       repo_size = repo['size']
+       repo_language = repo['language']
+    context = {
+        'repos': repos,
+    }
+     
+    return render(request, 'allrepos.html', context)
 
   
 

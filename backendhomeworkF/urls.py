@@ -24,7 +24,7 @@ urlpatterns = [
 
    
     path('admin/', admin.site.urls),
-    path('', views.homepage, name='home'),
+    path('', views.all_repos, name='home'),
     path('all-repos/', views.all_repos, name='allrepos'),
     path('repo-size/', views.repo_size,name='reposize'),
     path('language-used/', views.repo_language,name='language'),
